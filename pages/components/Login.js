@@ -5,7 +5,7 @@ import Room from "./Room";
 function Login() {
   
 
-  const endpoint = "https://prod-in.100ms.live/hmsapi/videome.app.100ms.live/";
+  const endpoint = "your endpoint";
   
   const hmsActions = useHMSActions();
   const [inputValues, setInputValues] = useState("");
@@ -33,9 +33,9 @@ function Login() {
         method: "POST",
         body: JSON.stringify({
           user_id: "1234",
-          role: selectValues, //stage
+          role: selectValues, //stage or viewers
           type: "app",
-          room_id: "625c74c4903d857ab8eccace",
+          room_id: "your room id",
         }),
       });
       const { token } = await response.json();
